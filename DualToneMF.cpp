@@ -11,6 +11,7 @@ int DTMFDevice::goertzel(int freq){
 	return s_prev2 * s_prev2 + s_prev * s_prev - coeff * s_prev * s_prev2 ;
 	
 }
+//Todo: 
 char DTMFDevice::getTone(){
 	if((buff[0]+buff[1]+buff[2]+buff[3]+buff[4]+buff[5])==0){
 		
