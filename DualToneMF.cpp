@@ -1,10 +1,10 @@
 int DTMFDevice::goertzel(int freq){
-	int freq =  freq/100000;
+	freq =  freq/100000;
 	int s_prev = 0 ;
 	int s_prev2 = 0 ;
 	int coeff = 2 * cos(2 * 3.14 * freq) ;
-	for(int i = 2; i < 6; i++){
-		s = x[i] + coeff *s_prev  - s_prev2 ;
+	for(int i = 2; i < 32; i++){
+		int s = arr[i] + coeff *s_prev  - s_prev2 ;
 		s_prev2 = s_prev ;
 		s_prev = s ;
 	}
